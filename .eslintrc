@@ -1,0 +1,39 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "react-native", "prettier"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".ts", ".tsx"]
+      }
+    }
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "extends": ["airbnb", "prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "max-len": ["error", 120],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "no-use-before-define": ["error", { "variables": false }],
+    "no-unused-vars": 0,
+    "@typescript-eslint/no-unused-vars": 2,
+    "react/jsx-filename-extension": ["error", { "extensions": [".tsx"] }],
+    "react/jsx-one-expression-per-line": "off",
+    "react/prop-types": "off",
+    "react/destructuring-assignment": "off",
+    "react/sort-comp": false,
+    "react-native/no-unused-styles": 2,
+    "react-native/split-platform-components": 2,
+    "react-native/no-inline-styles": 0,
+    "react-native/no-color-literals": 2,
+    "react-native/no-raw-text": 0,
+    "implicit-arrow-linebreak": "off",
+    "arrow-parens": ["error", "as-needed"],
+    "comma-dangle": "off"
+  },
+  "env": {
+    "browser": true
+  }
+}
